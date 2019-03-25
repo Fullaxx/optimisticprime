@@ -23,8 +23,7 @@ tar file psmisc less zip unzip tree dos2unix screen nano which dhclient vim emac
 autoconf automake bash-completion bison byacc cscope cmake ctags diffstat doxygen \
 elfutils flex gcc gcc-c++ gcc-gfortran gdb git libtool make man-db man-pages \
 ncurses-term patch patchutils rsync subversion tigervnc-server xterm xauth xhost && \
-yum clean all && rm -rf /var/cache/yum && \
-rm -rf /{root,tmp,var/cache/{ldconfig,yum}}/*
+yum clean all && rm -rf /{root,tmp,var/cache/{ldconfig,yum}}/*
 
 # ------------------------------------------------------------------------------
 # Configure system
