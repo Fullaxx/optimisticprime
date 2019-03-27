@@ -22,8 +22,9 @@ rpm --import https://dl.iuscommunity.org/pub/ius/IUS-COMMUNITY-GPG-KEY
 RUN yum -y install --disableplugin=fastestmirror \
 centos-release-scl centos-release-scl-rh epel-release \
 https://centos7.iuscommunity.org/ius-release.rpm \
-bash bash-completion chrony dhclient dos2unix file java-1.8.0-openjdk-devel \
-less nano net-tools nmap nmap-ncat openssh-server openssh-clients passwd psmisc \
+bash bash-completion chrony dhclient dos2unix file libmicrohttpd less \
+nano net-tools nmap nmap-ncat openssh-server openssh-clients passwd psmisc \
+maven java-1.8.0-openjdk-devel Cython python-setuptools python-virtualenv \
 screen sudo tar tigervnc-server tree unzip vim which xterm xauth xhost zip \
 apr apr-util autoconf automake bison byacc cscope cmake ctags diffstat doxygen \
 elfutils emacs flex gcc gcc-c++ gcc-gfortran gdb git libtool make man-db man-pages \
@@ -37,8 +38,12 @@ rm -rf /{root,tmp,var/cache/{ldconfig,yum}}/*
 # ------------------------------------------------------------------------------
 # Install EPEL Packages and clean up
 RUN yum -y install --disableplugin=fastestmirror \
-bluefish cgdb geany nedit most openbox terminator && yum clean all && \
-rm -rf /{root,tmp,var/cache/{ldconfig,yum}}/*
+bluefish cgdb geany htop nedit most openbox python2-pip terminator zeromq && \
+yum clean all && rm -rf /{root,tmp,var/cache/{ldconfig,yum}}/*
+
+# ------------------------------------------------------------------------------
+# Things to think about
+# chromium(epel)
 
 # ------------------------------------------------------------------------------
 # Configure system
