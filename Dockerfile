@@ -37,7 +37,7 @@ rm -rf /{root,tmp,var/cache/{ldconfig,yum}}/*
 # ------------------------------------------------------------------------------
 # Install EPEL Packages and clean up
 RUN yum -y install --setopt=tsflags=nodocs --disableplugin=fastestmirror \
-bluefish cgdb geany most openbox terminator && yum clean all && \
+bluefish cgdb geany nedit most openbox terminator && yum clean all && \
 rm -rf /{root,tmp,var/cache/{ldconfig,yum}}/*
 
 # ------------------------------------------------------------------------------
