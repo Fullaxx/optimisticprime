@@ -54,3 +54,4 @@ sed -i '/Defaults    requiretty/c\#Defaults    requiretty' /etc/sudoers
 # ------------------------------------------------------------------------------
 # Expose ports
 EXPOSE 22
+EXPOSE 5901
