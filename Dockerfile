@@ -15,11 +15,11 @@ rpm --import https://dl.iuscommunity.org/pub/ius/IUS-COMMUNITY-GPG-KEY
 
 # ------------------------------------------------------------------------------
 # Not Yet
-# RUN yum -y update --setopt=tsflags=nodocs --disableplugin=fastestmirror
+# RUN yum -y update --disableplugin=fastestmirror
 
 # ------------------------------------------------------------------------------
 # Install BASE Packages and clean up
-RUN yum -y install --setopt=tsflags=nodocs --disableplugin=fastestmirror \
+RUN yum -y install --disableplugin=fastestmirror \
 centos-release-scl centos-release-scl-rh epel-release \
 https://centos7.iuscommunity.org/ius-release.rpm \
 bash bash-completion chrony dhclient dos2unix file java-1.8.0-openjdk-devel \
@@ -32,11 +32,11 @@ rm -rf /{root,tmp,var/cache/{ldconfig,yum}}/*
 
 # ------------------------------------------------------------------------------
 # Not Yet
-# RUN yum -y update --setopt=tsflags=nodocs --disableplugin=fastestmirror
+# RUN yum -y update --disableplugin=fastestmirror
 
 # ------------------------------------------------------------------------------
 # Install EPEL Packages and clean up
-RUN yum -y install --setopt=tsflags=nodocs --disableplugin=fastestmirror \
+RUN yum -y install --disableplugin=fastestmirror \
 bluefish cgdb geany nedit most openbox terminator && yum clean all && \
 rm -rf /{root,tmp,var/cache/{ldconfig,yum}}/*
 
